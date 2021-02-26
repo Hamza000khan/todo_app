@@ -81,7 +81,21 @@ class TodoClass {
 
 
 
+////-----MAIN PROGRAM------------
+const listSection = document.querySelector("#myUL");
 
+myTodoList = new TodoClass(listSection);
+
+
+document.querySelector(".addBtn").addEventListener("click", function () {
+    myTodoList.add()
+})
+
+document.querySelector("#myInput").addEventListener("keydown", function (e) {
+    if (e.keyCode == 13) {
+        myTodoList.add()
+    }
+})
 
 
 
